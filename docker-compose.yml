@@ -4,8 +4,8 @@ services:
     build:
       context: ./images/builder
     volumes: 
-      - type: bind
-        source: ./app
+      - type: volume
+        source: app
         target: /app
   
   prodworker:
