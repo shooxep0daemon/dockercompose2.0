@@ -9,4 +9,4 @@ WORKDIR ./testrepo/app/
 RUN mvn package
 #package so libraries r added 2 run from bash
 WORKDIR ./target/
-RUN cp hello-world-1.0-SNAPSHOT.jar ./appdata
+RUN cp hello-world-1.0-SNAPSHOT.jar ../appdata
