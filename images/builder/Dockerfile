@@ -1,5 +1,7 @@
-FROM alpine
-RUN apk update && apk add maven && apk add git
+#FROM alpine
+FROM adoptopenjdk/openjdk8
+#trying other image with alpine and jdk
+RUN apk update && apk add maven && apk add git && apk add jdk
 WORKDIR /app
 RUN git clone https://github.com/shooxep0daemon/testrepo.git
 WORKDIR ./testrepo/app/
