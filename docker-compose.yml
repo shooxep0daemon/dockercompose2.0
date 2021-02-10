@@ -7,7 +7,7 @@ services:
       - type: volume
         source: appdata
         target: /appdata
-    command: sleep infinity
+    command: cp hello-world-1.0-SNAPSHOT.jar /appdata
   
   prodworker:
     image: openjdk:8-jre-slim-buster
