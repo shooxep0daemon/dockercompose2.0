@@ -12,5 +12,3 @@ services:
     image: alpine:latest 
     volumes:
       - ./app/:var/app
-    links:
-      - builder
