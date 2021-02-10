@@ -7,6 +7,6 @@ WORKDIR /app
 RUN git clone https://github.com/shooxep0daemon/testrepo.git
 WORKDIR ./testrepo/app/
 RUN mvn package
+#package so libraries r added 2 run from bash
 WORKDIR ./target/
-RUN cp  hello-world-1.0-SNAPSHOT.jar ./appdata
-#package so libraries r adde 2 run from bash
+RUN cp hello-world-1.0-SNAPSHOT.jar ./appdata
