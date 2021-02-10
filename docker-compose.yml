@@ -1,8 +1,7 @@
 version: "3.7"
 services: 
   builder:
-     image: ubuntu:latest
-     command: sh -c "apt update && apt install maven -y"
+     context: ./images/builder
      working_dir: /var/app
      volumes: 
        - ./app/:var/app
