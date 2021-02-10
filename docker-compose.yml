@@ -15,7 +15,7 @@ services:
       - appdata:./runjar
     depends_on:
       - builder
-    command: java -jar /runjar/hello-world-1.0-SNAPSHOT.jar
+    command: java -jar ./runjar/hello-world-1.0-SNAPSHOT.jar
 
 volumes: 
   appdata:
