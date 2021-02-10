@@ -3,7 +3,7 @@ services:
   builder:
       build:
        context: .
-       dockerfile: : ./images/builder
+       dockerfile: ./images/builder
      working_dir: /var/app
      volumes: 
        - ./app/:var/app
