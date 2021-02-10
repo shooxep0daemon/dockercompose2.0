@@ -3,13 +3,18 @@ services:
   builder:
     build:
       context: ./images/builder
-    working_dir: /var/app
     volumes: 
-       - ./app/:var/app
+      - type: bind
+        source: ./app
+        target: /app
     links:
        - prodworker
   
   prodworker:
-    image: alpine:latest 
+    image: alpine:latest
+    depends_on: builder 
     volumes:
-      - ./app/:var/app
+      - type: volume
+        source: ./app
+        target: /app
+
