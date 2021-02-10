@@ -1,5 +1,5 @@
 #FROM alpine
-FROM adoptopenjdk/openjdk8
+FROM openjdk:8-jre-alpine
 #trying other image with alpine and jdk
 RUN apk update && apk add maven && apk add git && apk add jdk
 WORKDIR /app
