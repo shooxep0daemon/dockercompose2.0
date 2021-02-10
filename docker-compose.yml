@@ -1,6 +1,7 @@
 version: "3.7"
 services: 
   builder:
+     context: .
      build: ./images/builder
      working_dir: /var/app
      volumes: 
