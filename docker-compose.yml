@@ -6,7 +6,7 @@ services:
     volumes: 
       - type: volume
         source: appdata
-        target: ./appdata
+        target: /appdata
     command: sleep infinity
   
   prodworker:
