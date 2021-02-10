@@ -11,9 +11,11 @@ services:
   
   prodworker:
     image: openjdk:8-jre-slim-buster
+    volumes:
+      - appdata:./runjar
     depends_on:
       - builder
-    command: java -jar /appdata/hello-world-1.0-SNAPSHOT.jar
+    command: java -jar /runjar/hello-world-1.0-SNAPSHOT.jar
 
 volumes: 
   appdata:
