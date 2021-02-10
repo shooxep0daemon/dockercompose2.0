@@ -1,13 +1,13 @@
 version: "3.7"
 services: 
   builder:
-      build:
-       context: .
-       dockerfile: ./images/builder
-     working_dir: /var/app
-     volumes: 
+    build:
+      context: .
+      dockerfile: ./images/builder
+    working_dir: /var/app
+    volumes: 
        - ./app/:var/app
-     links:
+    links:
        - prodworker
   
   prodworker:
