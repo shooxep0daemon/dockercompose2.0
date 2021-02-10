@@ -1,6 +1,6 @@
 #FROM alpine
 #FROM openjdk:8-jre-alpine
-FROM maven:3.6.3-openjdk-8-slim
+FROM maven:ibmjava-alpine
 #trying other image with alpine and jdk
 #RUN apk update && apk add maven && apk add git
 WORKDIR /app
