@@ -2,8 +2,7 @@ version: "3.7"
 services: 
   builder:
     build:
-      context: .
-      dockerfile: ./images/builder
+      context: ./images/builder
     working_dir: /var/app
     volumes: 
        - ./app/:var/app
