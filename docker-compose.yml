@@ -12,7 +12,8 @@ services:
   
   prodworker:
     image: alpine:latest
-    depends_on: builder 
+    depends_on:
+      - builder
     volumes:
       - type: volume
         source: ./app
