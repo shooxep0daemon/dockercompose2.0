@@ -7,8 +7,7 @@ services:
       - type: volume
         source: appdata
         target: /appdata
-    command: [ "sleep" ]
-    args: [ "infinity" ]
+    command: sleep infinity
   
   prodworker:
     image: openjdk:8-jre-slim-buster
@@ -18,8 +17,7 @@ services:
       - type: volume
         source: appdata
         target: /appdata
-    command: ["java"]
-    args: ["-jar /appdata/hello-world-1.0-SNAPSHOT.jar"]
+    command: java -jar /appdata/hello-world-1.0-SNAPSHOT.jar
 
 volumes: 
   appdata:
