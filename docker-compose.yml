@@ -14,6 +14,9 @@ services:
       - builder
     volumes:
       - type: volume
-        source: ./app
+        source: app
         target: /app
+
+volumes: 
+  app:
 
