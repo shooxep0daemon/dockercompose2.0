@@ -5,18 +5,22 @@ services:
       context: ./images/builder
     volumes: 
       - type: volume
-        source: app
-        target: /app
+        source: appdata
+        target: /appdata
+    command: [ "sleep" ]
+    args: [ "infinity" ]
   
   prodworker:
-    image: alpine:latest
+    image: openjdk:8-jre-slim-buster
     depends_on:
       - builder
     volumes:
       - type: volume
-        source: app
-        target: /app
+        source: appdata
+        target: /appdata
+    command: ["java"]
+    args: ["-jar /appdata/hello-world-1.0-SNAPSHOT.jar"]
 
 volumes: 
-  app:
+  appdata:
 
