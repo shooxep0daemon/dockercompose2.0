@@ -4,5 +4,5 @@ RUN apk add maven
 VOLUME /app /app
 WORKDIR /app
 RUN mvn package
-#add libraries 2 run from bash
+#package so libraries r adde 2 run from bash
 CMD ["/bin/sh","sleep infinity"]
