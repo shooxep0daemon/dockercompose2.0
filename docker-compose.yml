@@ -20,8 +20,6 @@ services:
       - MYSQL_DATABASE=dbtest
     ports:
        - "3306:3306"
-    depends_on:
-      - builder
 
 volumes: 
   appdata:
