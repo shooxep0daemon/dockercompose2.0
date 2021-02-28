@@ -9,6 +9,8 @@ services:
       - type: volume
         source: ./Config.properties
         target: /usr/local/tomcat/ROOT/Config.properties
+    links:
+      - db
   
   db:
     image: mariadb:10.1
