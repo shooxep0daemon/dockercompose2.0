@@ -8,7 +8,7 @@ services:
     volumes: 
       - type: volume
         source: ./Config.properties
-        target: /App42PaaS-Java-MySQL-Sample/WebContent/Config.properties
+        target: /usr/local/tomcat/ROOT/Config.properties
   
   db:
     image: mariadb:10.1
