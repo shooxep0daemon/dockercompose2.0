@@ -7,4 +7,5 @@ RUN mvn clean
 RUN mvn install
 WORKDIR ./target
 RUN cp App42PaaS-Java-MySQL-Sample-0.0.1-SNAPSHOT.war $CATALINA_HOME/webapps
+WORKDIR $CATALINA_HOME
 CMD ["catalina.sh" "run"]
