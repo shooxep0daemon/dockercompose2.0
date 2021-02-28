@@ -12,8 +12,11 @@ services:
   
   db:
     image: mariadb:10.1
+    container_name: db
     environment: 
       - MYSQL_ROOT_PASSWORD=secret
+    ports:
+       - "3306:3306"
     depends_on:
       - builder
 
