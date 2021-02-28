@@ -2,7 +2,7 @@ FROM maven:ibmjava-alpine
 RUN apk update && apk add git
 WORKDIR /app
 RUN git clone https://github.com/shephertz/App42PaaS-Java-MySQL-Sample.git
-WORKDIR /App42PaaS-Java-MySQL-Sample
+WORKDIR /app/App42PaaS-Java-MySQL-Sample
 RUN mvn clean
 RUN mvn install
 WORKDIR ./target/
