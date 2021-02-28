@@ -1,11 +1,9 @@
-#FROM alpine
-#FROM openjdk:8-jre-alpine
 FROM maven:ibmjava-alpine
-#trying other image with alpine and jdk
 RUN apk update && apk add git
 WORKDIR /app
-RUN git clone https://github.com/shooxep0daemon/testrepo.git
-WORKDIR ./testrepo/app/
-RUN mvn package
-#package so libraries r added 2 run from bash
+RUN git clone https://github.com/shephertz/App42PaaS-Java-MySQL-Sample.git
+WORKDIR /App42PaaS-Java-MySQL-Sample
+RUN mvn clean
+RUN mvn install
 WORKDIR ./target/
+RUN cp App42PaaS-Java-MySQL-Sample-0.0.1-SNAPSHOT.war $CATALINA_HOME/webapps/

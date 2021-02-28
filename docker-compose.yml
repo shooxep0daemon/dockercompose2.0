@@ -5,19 +5,15 @@ services:
       context: ./images/builder
     volumes: 
       - type: volume
-        source: appdata
-        target: /appdata
-    command: cp hello-world-1.0-SNAPSHOT.jar /appdata
+        source: ./Config.properties
+        target: /App42PaaS-Java-MySQL-Sample/WebContent/Config.properties
   
-  prodworker:
-    image: openjdk:8-jre-slim-buster
-    volumes:
-      - type: volume
-        source: appdata
-        target: /runjar
+  db:
+    image: mariadb:10.1
+    environment: 
+      - MYSQL_ROOT_PASSWORD = secret
     depends_on:
       - builder
-    command: java -jar /runjar/hello-world-1.0-SNAPSHOT.jar
 
 volumes: 
   appdata:
