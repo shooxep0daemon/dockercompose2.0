@@ -8,4 +8,4 @@ RUN mvn install
 WORKDIR ./target
 RUN cp App42PaaS-Java-MySQL-Sample-0.0.1-SNAPSHOT.war $CATALINA_HOME/webapps
 WORKDIR /usr/local/tomcat
-CMD ["catalina.sh" "run"]
+CMD ["catalina.sh", "run"]
